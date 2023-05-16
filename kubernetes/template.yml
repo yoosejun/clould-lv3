@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: username/app:latest
+          image: sejunyoo/app:v1
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
         - name: store
-          image: username/store:latest
+          image: sejunyoo/store:v1
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -98,7 +98,7 @@ spec:
     spec:
       containers:
         - name: delivery
-          image: username/delivery:latest
+          image: sejunyoo/delivery:v1
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -138,7 +138,7 @@ spec:
     spec:
       containers:
         - name: customerCenter
-          image: username/customerCenter:latest
+          image: sejunyoo/customerCenter:v1
           ports:
             - containerPort: 8080
           readinessProbe:

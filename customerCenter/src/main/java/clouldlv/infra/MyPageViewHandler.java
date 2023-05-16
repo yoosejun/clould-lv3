@@ -40,24 +40,24 @@ public class MyPageViewHandler {
     }
 
 
-    @StreamListener(KafkaProcessor.INPUT)
-    public void when_then_UPDATE_(@Payload  ) {
-        try {
-            if (!.validate()) return;
-                // view 객체 조회
+    // @StreamListener(KafkaProcessor.INPUT)
+    // public void when_then_UPDATE_(@Payload  ) {
+    //     try {
+    //         if (!.validate()) return;
+    //             // view 객체 조회
 
-                List<MyPage> myPageList = myPageRepository.findByOrderId(.getOrderId());
-                for(MyPage myPage : myPageList){
-                    // view 객체에 이벤트의 eventDirectValue 를 set 함
-                    myPage.setStatus(.getStatus());
-                // view 레파지 토리에 save
-                myPageRepository.save(myPage);
-                }
+    //             List<MyPage> myPageList = myPageRepository.findByOrderId(.getOrderId());
+    //             for(MyPage myPage : myPageList){
+    //                 // view 객체에 이벤트의 eventDirectValue 를 set 함
+    //                 myPage.setStatus(.getStatus());
+    //             // view 레파지 토리에 save
+    //             myPageRepository.save(myPage);
+    //             }
 
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+    //     }catch (Exception e){
+    //         e.printStackTrace();
+    //     }
+    // }
     @StreamListener(KafkaProcessor.INPUT)
     public void whenCooked_then_UPDATE_2(@Payload Cooked cooked) {
         try {
@@ -68,6 +68,7 @@ public class MyPageViewHandler {
                 for(MyPage myPage : myPageList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     myPage.setStatus(cooked.getStatus());
+                    myPage.setOrderId(cooked.getOrderId());
                 // view 레파지 토리에 save
                 myPageRepository.save(myPage);
                 }
