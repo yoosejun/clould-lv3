@@ -18,6 +18,7 @@ www.msaez.io/#/storming/clouldlvsm
 # ![msaez](https://github.com/yoosejun/clould-lv3/assets/51141885/c7bdaa2d-030d-4dd6-be03-91018156d597)
 
 # 2. Saga (Pub / Sub) 확인 (클러스터에 Kafka 설치 후)
+# ![ttt](https://github.com/yoosejun/clould-lv3/assets/51141885/743dda54-dbd7-4c23-b673-a6b1d69f52ca)
 
 # 3. Service Router 설치
 # ![gitpod](https://github.com/yoosejun/clould-lv3/assets/51141885/30cdd4ea-c844-4e24-9433-e2dc3436fb25)
